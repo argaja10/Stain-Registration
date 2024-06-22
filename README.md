@@ -17,6 +17,7 @@ methods.
   <img width = "20%" src="stain_registration/TestData/01-CD31.jpg">
   <img width = "20%" src="stain_registration/TestData/01-Ki67.jpg">
 </div>
+
 ## Method
 This project implements a combination of intensity and feature based methods and evaluates its performance on the test data based
 on mean error (average euclidean distance between registered and true landmarks), k-Pixel threshold error and average computational time.
