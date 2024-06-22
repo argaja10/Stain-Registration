@@ -60,21 +60,21 @@ Git
 Setup
 
 Clone the repository:
-'''
+```
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
-'''
+```
 
 Create and activate the conda environment:
-'''
+```
 conda env create -f environment.yml
 conda activate your-env-name
-'''
+```
 Replace your-env-name with the name specified in your environment.yml file.
 
 Verify the installation:
 
 Ensure all dependencies are installed and the environment is set up correctly:
-'''
+```
 conda list
-'''
+```
