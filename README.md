@@ -28,25 +28,28 @@ The registrations methods used in this work are scale invariant feature transfor
 ## Structure
 Below is a high-level overview of the project structure:
 
-''' css
-your-repo-name/
-├── images/
-│   ├── screenshot1.png
-│   ├── screenshot2.png
-├── data/
-│   ├── raw/
-│   ├── processed/
-├── notebooks/
-│   ├── analysis.ipynb
-├── src/
-│   ├── main.py
-│   ├── module1.py
-│   ├── module2.py
-├── tests/
-│   ├── test_main.py
-│   ├── test_module1.py
-├── .gitignore
-├── environment.yml
+```
+.
+├── stain_registration
+│   ├── Results
+│   │   ├── index-ui.css
+│   │   └── rate-ui.css
+│   ├── images
+│   │   ├── icons
+│   │   │   ├── shrink-button.png
+│   │   │   └── umbrella.png
+│   │   ├── logo_144.png
+│   │   └── Untitled-1.psd
+│   └── javascript
+│       ├── index.js
+│       └── rate.js
 ├── LICENSE
-├── README.md
-'''
+└── README.md
+```
+
+| No | File Name | Details 
+|----|------------|-------|
+| 1  | index | Entry point
+
+## Usage
+
