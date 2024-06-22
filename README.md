@@ -51,5 +51,32 @@ Below is a high-level overview of the project structure:
 |----|------------|-------|
 | 1  | index | Entry point
 
-## Usage
+## Installation
+Prerequisites
+Make sure you have the following installed:
+
+Anaconda (Recommended)
+Git
+Setup
+Clone the repository:
+
+bash
+Copy code
+git clone https://github.com/yourusername/your-repo-name.git
+cd your-repo-name
+Create and activate the conda environment:
+
+bash
+Copy code
+conda env create -f environment.yml
+conda activate your-env-name
+Replace your-env-name with the name specified in your environment.yml file.
+
+Verify the installation:
+
+Ensure all dependencies are installed and the environment is set up correctly:
+
+bash
+Copy code
+conda list
 
