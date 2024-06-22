@@ -12,9 +12,9 @@ with H&E and three IHC markers, namely CC10, CD31 and Ki67. Each of the images a
 associated landmarks denoting key points which are used to evaluate the performance of the registration
 methods. 
 <div align="center">
-	<img width = "15%" src="stain_registration/TestData/01-HE.jpg">
-  <img width = "15%" src="stain_registration/TestData/01-CC10.jpg">
-  <img width = "15%" src="stain_registration/TestData/01-CD31.jpg">
-  <img width = "15%" src="stain_registration/TestData/01-Ki67.jpg">
+	<img width = "20%" src="stain_registration/TestData/01-HE.jpg">
+  <img width = "20%" src="stain_registration/TestData/01-CC10.jpg">
+  <img width = "20%" src="stain_registration/TestData/01-CD31.jpg">
+  <img width = "20%" src="stain_registration/TestData/01-Ki67.jpg">
 </div>
 
