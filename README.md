@@ -6,3 +6,8 @@ different methods to register immunohistochemical (IHC) stained images to hemato
 (H&E) stained images and evaluates their performance. The methods are tested on a dataset con-
 sisting of one set of stains (a total of four images) of serial sections stained with H&E and three IHC
 markers (CC10, CD31, and Ki67), along with their corresponding landmark coordinates.
+## Dataset
+The data set used to test the different methods, consists of four images of consecutive tissue slices, stained
+with H&E and three IHC markers, namely CC10, CD31 and Ki67. Each of the images are provided with
+associated landmarks denoting key points which are used to evaluate the performance of the registration
+methods.
