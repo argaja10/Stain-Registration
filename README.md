@@ -61,7 +61,7 @@ Setup
 
 Clone the repository:
 ```
-git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/argaja10/stain_registration_v2.git)
+git clone https://github.com/argaja10/stain_registration_v2.git
 cd stain_registration_v2
 ```
 
