@@ -61,8 +61,8 @@ Setup
 
 Clone the repository:
 ```
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
+git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/argaja10/stain_registration_v2.git)
+cd stain_registration_v2
 ```
 
 Create and activate the conda environment:
