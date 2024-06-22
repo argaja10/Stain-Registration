@@ -28,8 +28,7 @@ The registrations methods used in this work are scale invariant feature transfor
 ## Structure
 Below is a high-level overview of the project structure:
 
-css
-Copy code
+''' css
 your-repo-name/
 ├── images/
 │   ├── screenshot1.png
@@ -50,16 +49,4 @@ your-repo-name/
 ├── environment.yml
 ├── LICENSE
 ├── README.md
-images/: Contains images used in the README or elsewhere in the project.
-data/: Contains data used in the project.
-raw/: Raw data that has not been processed.
-processed/: Data that has been processed and is ready for analysis.
-notebooks/: Jupyter notebooks for data analysis or experimentation.
-src/: Source code for the project.
-main.py: Main script to run the project.
-module1.py, module2.py: Additional modules.
-tests/: Unit tests for the project.
-.gitignore: Specifies files and directories that should be ignored by Git.
-environment.yml: Conda environment configuration file.
-LICENSE: License for the project.
-README.md: The file you are currently reading.
+'''
