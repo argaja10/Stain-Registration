@@ -20,5 +20,46 @@ methods.
 
 ## Method
 This project implements a combination of intensity and feature based methods and evaluates its performance on the test data based
-on mean error (average euclidean distance between registered and true landmarks), k-Pixel threshold error and average computational time.
+on mean error (average euclidean distance between registered and true landmarks), k-Pixel threshold error (percentage of pixels for which the registered landmarks is off the
+ground truth by more than k pixels) and average computational time (time to perform the registration including finding the transformation matrix/parameters
+and transforming the landmarks).
 The registrations methods used in this work are scale invariant feature transform (SIFT), optical flow and ANTs. The images are preprocessed to normalize the stain using the Reinhard color transformation technique, using the H&E stain as the template.
+
+## Structure
+Below is a high-level overview of the project structure:
+
+css
+Copy code
+your-repo-name/
+├── images/
+│   ├── screenshot1.png
+│   ├── screenshot2.png
+├── data/
+│   ├── raw/
+│   ├── processed/
+├── notebooks/
+│   ├── analysis.ipynb
+├── src/
+│   ├── main.py
+│   ├── module1.py
+│   ├── module2.py
+├── tests/
+│   ├── test_main.py
+│   ├── test_module1.py
+├── .gitignore
+├── environment.yml
+├── LICENSE
+├── README.md
+images/: Contains images used in the README or elsewhere in the project.
+data/: Contains data used in the project.
+raw/: Raw data that has not been processed.
+processed/: Data that has been processed and is ready for analysis.
+notebooks/: Jupyter notebooks for data analysis or experimentation.
+src/: Source code for the project.
+main.py: Main script to run the project.
+module1.py, module2.py: Additional modules.
+tests/: Unit tests for the project.
+.gitignore: Specifies files and directories that should be ignored by Git.
+environment.yml: Conda environment configuration file.
+LICENSE: License for the project.
+README.md: The file you are currently reading.
