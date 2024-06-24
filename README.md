@@ -78,12 +78,15 @@ Below is a high-level overview of the project structure:
 | 1  | index | Entry point
 
 ## Installation
-Prerequisites
+### Prerequisites
+
 Make sure you have the following installed:
 
 Anaconda (Recommended)
+
 Git
-Setup
+
+### Setup
 
 Clone the repository:
 ```
