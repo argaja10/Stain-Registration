@@ -165,7 +165,7 @@ def main():
     parser.add_argument('--target_path', type=str, required=True, help="Provide file path for normalized target (IHC) image")
     parser.add_argument('--source_landmarks_path', type=str, required=True, help="Provide file path for source (H&E) landmarks")
     parser.add_argument('--target_landmarks_path', type=str, required=True, help="Provide file path for target (IHC) landmarks")
-    parser.add_argument('--flag', type=int, required=True, help="Set to 1 if target image is of Ki67 marker")
+    parser.add_argument('--flag', type=int, required=True, help="Set to 1 if target image is of Ki67 marker else set to 0")
     args = parser.parse_args()
     
     # Case 1: Registration of CC10 to H&E stain
