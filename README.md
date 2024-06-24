@@ -73,9 +73,18 @@ Below is a high-level overview of the project structure:
 └── ants_env.yml
 ```
 
-| No | File Name | Details 
-|----|------------|-------|
-| 1  | index | Entry point
+-'Results/': Contains results/plot saved from the three methods.
+-'TestData/': Contains images and landmarks data used in the project. 
+-'evaluation.py': Contains functions to estimate analysis metrics.
+-'ants_method.py': Script to run the registration using ANTs method.
+-'normalize.py': Script to normaize the IHC images.
+-'optical_flow.py': Script to run the registration using opotical flow method.
+-'template_matching_SIFT1.py': Script to run the registration using SIFT method.
+-'ants_env.yml': Conda environment configuration file.
+-LICENSE: License for the project.
+-README.md: The file you are currently reading.
+
+Usage
 
 ## Installation
 ### Prerequisites
