@@ -101,9 +101,9 @@ Below is a high-level overview of the project structure:
 
 Make sure you have the following installed:
 
-Anaconda (Recommended)
+-Anaconda (Recommended)
 
-Git
+-Git
 
 ### Setup
 
