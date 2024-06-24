@@ -59,63 +59,13 @@ Below is a high-level overview of the project structure:
 │   │   └── 01-HE.jpg
 │   │   └── 01-Ki67.csv
 │   │   └── 01-Ki67.jpg
-│   │   └── SIFT_result.png
-│   │   └── gaussian_CC10.jpg
-│   │   └── gaussian_HE.jpg
-│   │   └── median_CC10.jpg
-│   │   └── median_HE.jpg
 │   │   └── normalized-01-CC10.jpg
 │   │   └── normalized-01-CD31.jpg
 │   │   └── normalized-01-Ki67.jpg
-│   ├── __pycache__
-│   │   └── antspy.cpython-37.pyc
-│   │   └── itk.cpython-38.pyc
-│   │   └── template_matching_SIFT.cpython-37.pyc
-│   │   └── template_matching_SIFT1.cpython-37.pyc
-│   │   └── visualization.cpython-312.pyc
-│   │   └── visualization.cpython-37.pyc
-│   ├── test-res-2
-│   │   └── 01-HE.jpg
-│   │   └── registered_image-2.jpg
-│   ├── test-res-3
-│   │   └── 01-CC10.jpg
-│   │   └── 01-HE.jpg
-│   │   └── registered_image-3.jpg
-│   └── Figure 2024-06-12 004717.png
-│   └── Figure 2024-06-12 004931.png
-│   └── Figure 2024-06-12 011228.png
-│   └── Figure 2024-06-12 011314.png
-│   └── Figure 2024-06-12 011453.png
-│   └── Figure 2024-06-12 011608.png
-│   └── Figure 2024-06-12 011728.png
-│   └── Figure 2024-06-12 011857.png
-│   └── Figure 2024-06-12 012111.png
-│   └── Figure 2024-06-12 012714.png
-│   └── Figure 2024-06-12 013001.png
-│   └── Figure 2024-06-12 013145.png
-│   └── Figure 2024-06-12 013655.png
-│   └── Figure 2024-06-12 013756.png
-│   └── Figure 2024-06-12 013837.png
-│   └── Figure 2024-06-12 020048.png
-│   └── Figure 2024-06-12 020601.png
-│   └── Figure 2024-06-12 023430.png
-│   └── Figure 2024-06-12 025007.png
-│   └── Figure 2024-06-12 114503.png
-│   └── Figure 2024-06-12 121541.png
-│   └── Figure 2024-06-12 121550.png
-│   └── Figure 2024-06-12 172922.png
 │   └── evaluation.py
-│   └── homography_best_method1.npy
-│   └── itk_method.py
+│   └── ants_method.py
 │   └── normalize.py
-│   └── normalized-01-CD31.jpg
 │   └── optical_flow.py
-│   └── registered_image-1.jpg
-│   └── registered_image-2.jpg
-│   └── registered_image-3.jpg
-│   └── registered_image.jpg
-│   └── template_matching_ORB.py
-│   └── template_matching_SIFT.py
 │   └── template_matching_SIFT1.py
 │   └── visualization.py
 └── LICENSE
