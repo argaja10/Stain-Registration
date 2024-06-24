@@ -21,8 +21,8 @@ methods.
 ## Method
 This project implements a combination of intensity and feature based methods and evaluates its performance on the test data based
 on mean error (average euclidean distance between registered and true landmarks), k-Pixel threshold error (percentage of pixels for which the registered landmarks is off the
-ground truth by more than k pixels) and average computational time (time to perform the registration including finding the transformation matrix/parameters
-and transforming the landmarks).
+ground truth by more than k pixels) and robustness (percentage of landmarks for which the
+euclidean distance between target and source points improved by more than 50% after registration).
 The registrations methods used in this work are scale invariant feature transform (SIFT), optical flow and ANTs. The images are preprocessed to normalize the stain using the Reinhard color transformation technique, using the H&E stain as the template.
 
 ## Structure
