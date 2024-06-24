@@ -124,6 +124,11 @@ Ensure all dependencies are installed and the environment is set up correctly:
 conda list
 ```
 
+Install ANTs:
+```
+pip install antspyx
+```
+
 ## Usage
 
 First, run the 'normalize.py' file to obtain the stain normalized images of each of the test data image. The normalized image will be automalically stored in TestData folder.
