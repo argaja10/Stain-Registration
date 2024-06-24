@@ -96,10 +96,9 @@ cd stain_registration_v2
 
 Create and activate the conda environment:
 ```
-conda env create -f environment.yml
-conda activate your-env-name
+conda env create -f ants_env.yml
+conda activate antspy
 ```
-Replace your-env-name with the name specified in your environment.yml file.
 
 Verify the installation:
 
