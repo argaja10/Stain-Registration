@@ -126,7 +126,14 @@ conda list
 
 ## Usage
 
-First, run the 'normalize.py' file to obtain the stain normalized images of each of the test data image
+First, run the 'normalize.py' file to obtain the stain normalized images of each of the test data image. The normalized image will be automalically stored in TestData folder.
 ```
 python normalize.py
+```
+
+### Demo run
+
+#### Method 1: SIFT (set flag=0 for CC10 & CD31 marker and flag=1 for Ki67 marker)
+```
+%run -i template_matching_SIFT1.py --source_path ./TestData/01-HE.jpg --normalized_target_path ./TestData/normalized-01-CC10.jpg --target_path ./TestData/01-CC10.jpg --source_landmarks_path ./TestData/01-HE.csv --target_landmarks_path ./TestData/01-CC10.csv --flag 0
 ```
