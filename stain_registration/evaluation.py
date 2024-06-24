@@ -9,76 +9,109 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from scipy.spatial.distance import euclidean
 from visualization import plot_landmarks, read_coordinates_from_csv, blend_images
+from skimage.metrics import hausdorff_distance
 
 
 
-
-def visualize_overlay_landmarks_with_distances(source_image, target_image, source_landmarks, target_landmarks, transform=None):
+def euclidean_distance_metric(landmarks1, landmarks2):
     """
-    Visualize the overlay of two images with landmarks and show the distances before and after registration.
-    
-    Args:
-    - source_image: The source image array.
-    - target_image: The target image array.
-    - source_landmarks: List of (x, y) coordinates for the source image landmarks.
-    - target_landmarks: List of (x, y) coordinates for the target image landmarks.
-    - transform: A function that applies the registration transformation to source landmarks.
+    Calculate the Euclidean distance between corresponding landmarks in two sets.
+
+    Parameters:
+    landmarks1, landmarks2: Arrays of shape (N, 2) representing N landmarks with (x, y) coordinates.
+
+    Returns:
+    distances: Array of Euclidean distances between corresponding landmarks.
     """
-    # Blend the images
-    blended_image = blend_images(source_image, target_image, alpha=0.5)
+    assert len(landmarks1) == len(landmarks2), "The number of landmarks in both sets must be equal."
+    landmarks1 = np.array(landmarks1)
+    landmarks2 = np.array(landmarks2)
+    # Calculate Euclidean distances
+    distances = np.linalg.norm(landmarks1 - landmarks2, axis=1)
+    sum_distances = np.sum(distances)
+    avg_distances = np.mean(distances)
+
+    return distances, sum_distances, avg_distances
+
+
+
+def k_pixel_threshold(distances, k):
+    """
+    Calculates the percentage of pixels for which the predicted disparity is off the ground truth by more than k pixels.
+
+    Parameters:
+    distances : List of euclidean dstances between the landmarks.
+    k : Pixel threshold.
+
+    Returns:
+    percentage : Percentage of landmarks that are offset by more than k-pixels.
+    """
+    count = len([d for d in distances if d > k])
+    print(count)
+    percentage = (count/len(distances))*100
     
-    # Calculate distances and transformed landmarks
-    distances_before = []
-    distances_after = []
-    transformed_landmarks = []
+    return percentage
+    
 
-    for src, tgt in zip(source_landmarks, target_landmarks):
-        distances_before.append(euclidean(src, tgt))
-        
-        if transform:
-            src_transformed = transform(np.array(src))
-        else:
-            src_transformed = np.array(src)
-        
-        distances_after.append(euclidean(src_transformed, np.array(tgt)))
-        transformed_landmarks.append(src_transformed)
+def relative_TRE(distances, source_image):
+    """
+    Calculate the length of the diagonal of an image.
 
-    # Plot blended image with landmarks and lines
-    plt.figure(figsize=(10, 10))
-    plt.imshow(blended_image)
+    Parameters:
+    image: Source image to calculate the diagonal length.
 
-    # Plot original landmarks
-    for (src, tgt) in zip(source_landmarks, target_landmarks):
-        plt.plot([src[0], tgt[0]], [src[1], tgt[1]], 'r--')
-    plot_landmarks(blended_image, source_landmarks, color='r', label='Source Landmarks')
+    Returns:
+    rdistances: List of relative target registrtaion error for each landmark.
+    """
+    # Get the dimensions of the image (height, width, number of color channels)
+    height, width = source_image.shape[:2]
+    
+    # Calculate the diagonal length 
+    diagonal = np.sqrt(width**2 + height**2)
+    
+    rdistances = np.mean(distances/diagonal)
 
-    # Plot target landmarks
-    plot_landmarks(blended_image, target_landmarks, color='g', label='Target Landmarks')
+    return rdistances
 
-    # Plot transformed source landmarks
-    for (src_trans, tgt) in zip(transformed_landmarks, target_landmarks):
-        plt.plot([src_trans[0], tgt[0]], [src_trans[1], tgt[1]], 'b-')
-    plot_landmarks(blended_image, transformed_landmarks, color='b', label='Transformed Source Landmarks')
 
-    plt.title('Overlay of Source and Target Images with Landmarks')
-    plt.show()
+def robustness(landmarks1, landmarks2, landmarks3):
+    """
+    Parameters
+    ----------
+    landmarks1 : Landmarks of the source image.
+    landmarks2 : Landmarks of the target image.
+    landmarks3 : Landmarks of the registered image.
 
-    # Print distances
-    print(f"Distances Before Registration: {distances_before}")
-    print(f"Distances After Registration: {distances_after}")
+    Returns
+    -------
+    robustness : Percentage describing how many landmarks improved its TRE after registration.
+    """
+    dist_source_target, _, _ = euclidean_distance_metric(landmarks1, landmarks2)
+    dist_source_transformed, _, _ = euclidean_distance_metric(landmarks1, landmarks3)
+    print(dist_source_target)
+    print(dist_source_transformed)
+    count = 0
+    total_landmarks =  len(dist_source_target)
+    for i in range(total_landmarks):
+        if (2*dist_source_transformed[i] < dist_source_target[i]):
+            count =  count + 1
+    robustness = count/total_landmarks
+    
+    return robustness
+  
+    
 
-# Example usage:
-source_image_path = 'path_to_source_image.png'
-target_image_path = 'path_to_target_image.png'
 
-source_image = np.array(Image.open(source_image_path))
-target_image = np.array(Image.open(target_image_path))
 
-source_landmarks = [(30, 50), (80, 90), (130, 150)]
-target_landmarks = [(32, 52), (78, 88), (128, 148)]
 
-# Define a dummy registration transformation for demonstration.
-def dummy_transform(point):
-    return point + np.array([2, 2])
 
-visualize_overlay_landmarks_with_distances(source_image, target_image, source_landmarks, target_landmarks, transform=dummy_transform)
+
+
+
+
+
+
+
+
+
+

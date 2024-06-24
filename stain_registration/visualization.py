@@ -124,80 +124,10 @@ def plot_landmarks_with_overlay(image, source_landmarks, target_landmarks, trans
         x_coords, y_coords = zip(*transformed_landmarks)
         plt.scatter(x_coords, y_coords, color='g', label='Transformed Landmarks')
         
+ 
+    
+ 
     
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# source_image_path = './TestData/01-HE.jpg'
-# source_image = Image.open(source_image_path)
-# source_landmarks_path = './TestData/01-HE.csv'
-# source_landmarks = read_coordinates_from_csv(source_landmarks_path)
-
-# target_image_path = './TestData/01-CC10.jpg'
-# target_image = Image.open(target_image_path)
-# target_landmarks_path = './TestData/01-CC10.csv'
-# target_landmarks = read_coordinates_from_csv(target_landmarks_path)
-
-
-
-# original_width, original_height = target_image.size
-# source_width, source_height = source_image.size
-
-# # Calculate padding
-# left_padding = (source_width - original_width) // 2
-# top_padding = (source_height - original_height) // 2
-
-# # Create a new image with target dimensions and white background
-# new_image = Image.new('RGB', (source_width, source_height), (255, 255, 255))
-
-# # Paste the original image onto the new image, centered
-# new_image.paste(target_image, (left_padding, top_padding))
-# target_image = new_image
-
-# source_image = np.array(source_image)
-# target_image = np.array(target_image)
-# blended_image = blend_images(source_image, target_image)
-# plt.imshow(blended_image)
-# plot_landmarks(blended_image, source_landmarks)
-# plt.imshow(blended_image)
-# plot_landmarks(blended_image, target_landmarks, color='blue')
-
-
-
-
-# # Reshape the landmarks to a format compatible with cv2.perspectiveTransform
-# target_landmarks = np.array(target_landmarks).reshape(-1, 1, 2)
-
-# # Transform the coordinates
-# transformed_landmarks = cv2.perspectiveTransform(target_landmarks, homography_matrix_new)
-
-# # Reshape back to original format
-# transformed_landmarks = transformed_landmarks.reshape(-1, 2)
-# transformed_landmarks_list = [tuple(np.round(coord,1)) for coord in transformed_landmarks]
-
-# plot_landmarks(blended_image, transformed_landmarks_list, color='green')
