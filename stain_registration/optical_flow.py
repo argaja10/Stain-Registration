@@ -75,7 +75,7 @@ def main():
     # Case 1: Registration of CC10 to H&E stain
     # Load source and target images
     source = cv.imread(args.source_path, cv.IMREAD_GRAYSCALE)
-    target = cv.imread(args.target_path, cv.IMREAD_GRAYSCALE)
+    target = cv.imread(args.normalized_target_path, cv.IMREAD_GRAYSCALE)
     
     # Register the images
     registered_image, v_rescaled, u_rescaled = register_images(source, target)
