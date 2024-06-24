@@ -141,16 +141,16 @@ python normalize.py
 
 #### Method 1: SIFT (set flag=0 for CC10 & CD31 marker and flag=1 for Ki67 marker)
 ```
-%run -i template_matching_SIFT1.py --source_path ./TestData/01-HE.jpg --normalized_target_path ./TestData/normalized-01-CC10.jpg --target_path ./TestData/01-CC10.jpg --source_landmarks_path ./TestData/01-HE.csv --target_landmarks_path ./TestData/01-CC10.csv --flag 0
+python template_matching_SIFT1.py --source_path ./TestData/01-HE.jpg --normalized_target_path ./TestData/normalized-01-CC10.jpg --target_path ./TestData/01-CC10.jpg --source_landmarks_path ./TestData/01-HE.csv --target_landmarks_path ./TestData/01-CC10.csv --flag 0
 ```
 
 #### Method 2: Optical flow
 ```
-%run -i optical_flow.py --source_path ./TestData/01-HE.jpg --normalized_target_path ./TestData/normalized-01-CC10.jpg --source_landmarks_path ./TestData/01-HE.csv --target_landmarks_path ./TestData/01-CC10.csv
+python optical_flow.py --source_path ./TestData/01-HE.jpg --normalized_target_path ./TestData/normalized-01-CC10.jpg --source_landmarks_path ./TestData/01-HE.csv --target_landmarks_path ./TestData/01-CC10.csv
 ```
 
 #### Method 3: ANTs
 ```
-%run -i ants_method.py --source_path ./TestData/01-HE.jpg --normalized_target_path ./TestData/normalized-01-CC10.jpg --source_landmarks_path ./TestData/01-HE.csv --target_landmarks_path ./TestData/01-CC10.csv
+python ants_method.py --source_path ./TestData/01-HE.jpg --normalized_target_path ./TestData/normalized-01-CC10.jpg --source_landmarks_path ./TestData/01-HE.csv --target_landmarks_path ./TestData/01-CC10.csv
 ```
 
