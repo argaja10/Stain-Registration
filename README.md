@@ -133,6 +133,7 @@ pip install antspyx
 
 First, run the 'normalize.py' file to obtain the stain normalized images of each of the test data image. The normalized image will be automalically stored in TestData folder.
 ```
+cd stain_registration
 python normalize.py
 ```
 
