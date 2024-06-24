@@ -123,3 +123,10 @@ Ensure all dependencies are installed and the environment is set up correctly:
 ```
 conda list
 ```
+
+## Usage
+
+First, run the 'normalize.py' file to obtain the stain normalized images of each of the test data image
+```
+python normalize.py
+```
