@@ -1,4 +1,4 @@
-# stain_registration_v2
+# Stain-Registration
 Accurate registration of multiple whole slide images (WSI) is vital for several pathology tasks
 such as joint analysis of various biomarkers and study of tissue morphology to aid in early diagnosis
 of diseases, continuous monitoring and patient specific treatment planning. This project investigates
@@ -107,8 +107,8 @@ Make sure you have the following installed:
 
 Clone the repository:
 ```
-git clone https://github.com/argaja10/stain_registration_v2.git
-cd stain_registration_v2
+git clone https://github.com/argaja10/Stain-Registration.git
+cd Stain-Registration
 ```
 
 Create and activate the conda environment:
