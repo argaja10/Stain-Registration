@@ -10,5 +10,5 @@ dependencies:
   - pip:
       - webcolors
       - scikit-image
-      - scipy==1.7.3
+      - scipy==1.13
       - opencv-python
