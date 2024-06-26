@@ -91,7 +91,7 @@ def SIFT_registration(source_image_path, normalized_target_image_path, target_im
     Sinv = Sinv_matrices[flag]
     homography_matrix_rescaled = np.matmul(S, homography_matrix)
     homography_matrix_rescaled = np.matmul(homography_matrix_rescaled, Sinv)
-    print(int(1/(scale_factors[flag])))
+    #print(int(1/(scale_factors[flag])))
     registered_image = cv.warpPerspective(target_image, homography_matrix_rescaled, (int(1/(scale_factors[flag]))*w, int(1/(scale_factors[flag]))*h))
     
     # Transform the coordinates
