@@ -47,7 +47,7 @@ def k_pixel_threshold(distances, k):
     percentage : Percentage of landmarks that are offset by more than k-pixels.
     """
     count = len([d for d in distances if d > k])
-    print(count)
+    #print(count)
     percentage = (count/len(distances))*100
     
     return percentage
@@ -88,8 +88,8 @@ def robustness(landmarks1, landmarks2, landmarks3):
     """
     dist_source_target, _, _ = euclidean_distance_metric(landmarks1, landmarks2)
     dist_source_transformed, _, _ = euclidean_distance_metric(landmarks1, landmarks3)
-    print(dist_source_target)
-    print(dist_source_transformed)
+    #print(dist_source_target)
+    #print(dist_source_transformed)
     count = 0
     total_landmarks =  len(dist_source_target)
     for i in range(total_landmarks):
