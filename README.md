@@ -154,3 +154,4 @@ python optical_flow.py --source_path ./TestData/01-HE.jpg --normalized_target_pa
 python ants_method.py --source_path ./TestData/01-HE.jpg --normalized_target_path ./TestData/normalized-01-CC10.jpg --source_landmarks_path ./TestData/01-HE.csv --target_landmarks_path ./TestData/01-CC10.csv
 ```
 
+Note: Results are reproducible in all cases except ANTs method as it uses some inherent randomizations. [See here.](https://github.com/ANTsX/ANTs/wiki/antsRegistration-reproducibility-issues)
