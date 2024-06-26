@@ -44,7 +44,8 @@ def register_images(source, target):
     h_old, w_old = u.shape[:2]
     h_new, w_new = target.shape[:2]
     from scipy.interpolate import interp2d
-    print(u.shape, v.shape)
+    #print(u.shape, v.shape)
+    # Interpolating and rescaling u and v
     f_u = interp2d(np.linspace(0,w_old-1,w_old),np.linspace(0,h_old-1,h_old),10*u,kind='linear')
     f_v = interp2d(np.linspace(0,w_old-1,w_old),np.linspace(0,h_old-1,h_old),10*v,kind='linear')
     
