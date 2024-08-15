@@ -129,6 +129,11 @@ Install ANTs:
 pip install antspyx
 ```
 
+Install PyQt5:
+```
+pip install PyQt5
+```
+
 ## Usage
 
 First, run the 'normalize.py' file to obtain the stain normalized images of each of the test data image. The normalized image will be automalically stored in TestData folder.
